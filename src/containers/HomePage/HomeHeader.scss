@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat';
+}
+
+.home-header-container {
+    height: 60px;
+    width: 100%;
+    margin: 10px 0;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 999;
+    
+
+    .home-header-content {
+        display: flex;
+        width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+
+        .icon-menu {
+            font-size: 25px;
+            color: grey;
+            cursor: pointer;
+        }
+
+        .left-content {
+            display: flex;
+            align-items: center;
+            width: 20%;
+            margin-right: 20px;
+
+            .header-logo {
+                background: url('../../assets/logo.svg') center center no-repeat;
+                height: 90%;
+                width: 85%;
+                margin-left: 10px;
+                cursor: pointer;
+            }
+        }
+
+        .center-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 60%;
+
+            .child-center-content {
+                color: #5e5c5c;
+                cursor: pointer;
+            }
+            .child-center-content:hover .subs-title {
+                color: #ffb500;
+            }
+
+            .subs-title {
+                font-weight: 400;
+                font-size: 12px;
+            }
+
+            
+        }
+        
+
+        .right-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20%;
+
+            .support {
+                margin-right: 30px;
+                cursor: pointer;
+            }
+
+            .icon-question {
+                color: #27b4b4;
+                margin-right: 4px;
+                font-size: 16px;
+            }
+
+            .dropdown {
+                margin: 0 40px;
+                height: 20px;
+                width: 20px;
+
+                .dropdown-language {
+                    position: relative;
+                    display: flex;
+                    height: 20px;
+                    width: 20px;
+                    align-items: center;
+                    border: none;
+                    background-color: white;
+                }
+
+                .list-language {
+                    position: absolute;
+                    display: none;
+                    padding: 10px;
+                    left: -24px;
+                    top: 140%;
+                    width: 70px;
+                    height: 40px;
+                    list-style: none;
+                    background: white;
+                    border-top: 1px solid #f7941d;
+                    box-shadow: 1px 1px 1px #333;
+                    border-bottom-left-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                
+                    .list-language-li {
+                        display: flex;
+                        align-items: center;
+                        height: 20px;
+                        width: 20px;
+                    
+                        .sp-li {
+                            margin-left: 4px;
+                        }
+                    }
+
+                    .list-language-li:hover .sp-li {
+                        color: #f7941d;
+                    }
+                }
+                .list-language::before {
+                    content: "";
+                    position: absolute;
+                    border: 10px solid transparent;
+                    right: 22px;
+                    top: -15px;
+                    width: 26px;
+                    z-index: 0;
+                }
+            }
+            .dropdown:hover .list-language {
+                display: block;
+            }
+
+            
+
+            .language-vi {
+                cursor: pointer;
+                &.active {
+                    span {
+                        color: orange;
+                    }
+                }
+            }
+
+            .language-en {
+                margin: 0 10px;
+                cursor: pointer;
+
+                &.active {
+                    color: blue;
+                }
+            }
+        }
+
+    }
+}
+
+.home-header-banner {
+    background-image: url('../../assets/header-background.jpg');
+    width: 100%;
+    height: 630px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    .banner-bg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25),rgba(255, 255, 255, 0.1));
+        width: 100%;
+        height: 630px;
+        padding-top: 50px;
+
+        .title-1 {
+            text-align: center;
+            font-size: 30px;
+            text-shadow: 1px 1px 1px #333;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    
+        .title-2 {
+            text-align: center;
+            font-size: 40px;
+            text-shadow: 1px 1px 1px #333;
+            color: white;
+            font-weight: bold;
+        }
+    
+        .search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            height: 45px;    
+            margin: 40px auto;
+            padding: 10px;
+            border-radius: 30px;
+            background: #f7d800;
+    
+    
+            .icon-search {
+    
+            }
+    
+            .search-input {
+                background: transparent;
+                width: 450px;
+                border: none;
+                outline: none;
+                padding: 0 10px;
+            }
+        }
+    
+        .app-link {
+            display: flex;
+            justify-content: center;
+            width: 400px;
+            margin: 50px auto;
+    
+            .app-GooglePlay {
+                background-image: url(../../assets/google-play-badge.svg);
+                height: 50px;
+                width: 170px;
+                border: 2px solid white;
+                border-radius: 10px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+    
+            .app-AppStore {
+                background-image: url(../../assets/app-store-badge-black.svg);
+                height: 50px;
+                width: 170px;
+                border: 2px solid white;
+                border-radius: 10px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                margin-left: 10px;
+                cursor: pointer;
+            }
+        }
+    
+        .options {
+            width: 100%;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.01),rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 1));
+    
+            .options-bg {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0 auto;
+                width: 1200px;
+                height: 230px;
+    
+                .options-child {
+                    width: 140px;
+                    height: 110px;
+                    cursor: pointer;
+                    
+        
+                    .icon-child {
+                        width: 50px;
+                        height: 50px;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: 32px;
+                        background-color: white;
+                        border-radius: 50%;
+                        box-shadow: 1px 1px 1px #333;
+                        margin: 0 auto;
+                    }
+    
+                    .icon-child-1 {
+                        background-image: url(../../assets/133537-khamchuyenkhoa.png);
+                    }
+    
+                    .icon-child-2 {
+                        background-image: url(../../assets/133657-khamtuxa.png);
+                    }
+    
+                    .icon-child-3 {
+                        background-image: url(../../assets/133744-khamtongquat.png);
+                    }
+    
+                    .icon-child-4 {
+                        background-image: url(../../assets/133744-dichvuxetnghiem.png);
+                    }
+    
+                    .icon-child-5 {
+                        background-image: url(../../assets/133744-suckhoetinhthan.png);
+                    }
+    
+                    .icon-child-6 {
+                        background-image: url(../../assets/133537-khamchuyenkhoa.png);
+                    }
+    
+                    .icon-child-7 {
+                        background-image: url(../../assets/134356-goi-phau-thuat.png);
+                    }
+    
+                    .icon-child-8 {
+                        background-image: url(../../assets/133744-khamtainha.png);
+                    }
+            
+                    .text-child {
+                        color: #333;
+                        font-size: 18px;
+                        text-align: center;
+                        font-weight: bold;
+                    }
+                }
+                .options-child:hover .text-child {
+                    color: #45c3d2;
+                }
+            }
+    
+            
+        }
+    }
+
+    
+}

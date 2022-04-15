@@ -1,0 +1,92 @@
+@import "../../styles/common.scss";
+
+.header-container {
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $colormain;
+    color: $common-text-color;
+    height: 40px;
+    position: relative;
+
+    .btn-logout {
+        color: $common-text-color;
+        line-height: 40px;
+        height: 40px;
+        padding: 0 10px;
+        &:hover {
+            background-color: darken($colormain, 5);
+        }
+        i {
+            font-size: $base-size + 1px;
+        }
+    }
+
+    .header-right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .dropdown {
+            margin: 0 40px;
+            height: 20px;
+            width: 20px;
+    
+            .dropdown-language {
+                position: relative;
+                display: flex;
+                height: 20px;
+                width: 20px;
+                align-items: center;
+                border: none;
+                background-color: transparent;
+            }
+    
+            .list-language {
+                position: absolute;
+                display: none;
+                padding: 10px;
+                left: -24px;
+                top: 140%;
+                width: 70px;
+                height: 40px;
+                list-style: none;
+                background: white;
+                border-top: 1px solid #f7941d;
+                box-shadow: 1px 1px 1px #333;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            
+                .list-language-li {
+                    display: flex;
+                    align-items: center;
+                    height: 20px;
+                    width: 20px;
+                
+                    .sp-li {
+                        margin-left: 4px;
+                    }
+                }
+    
+                .list-language-li:hover .sp-li {
+                    color: #f7941d;
+                }
+            }
+            .list-language::before {
+                content: "";
+                position: absolute;
+                border: 10px solid transparent;
+                right: 22px;
+                top: -15px;
+                width: 26px;
+                z-index: 0;
+            }
+        }
+        .dropdown:hover .list-language {
+            display: block;
+        }
+    }
+
+    
+}

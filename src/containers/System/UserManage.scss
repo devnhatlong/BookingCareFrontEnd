@@ -1,0 +1,76 @@
+#customers {
+    font-family: arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    
+    th {
+        background-color: #04AA6D;
+    }
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #ddd;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    .btn-edit {
+        width: 40px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: orange;
+    }
+    .btn-delete {
+        width: 40px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: rgb(220, 37, 37);
+    }
+}
+
+.modal-user-container {
+    .modal-header {
+        button {
+            background-color: transparent!important;
+            border: none;
+            color: white;
+            font-size: 30px;
+        }
+    }
+
+    .modal-user-body {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            width: 48%;
+
+            &.max-width-input {
+                width: 100%;
+            }
+    
+            input {
+                border-radius: 3px;
+                height: 30px;
+                border: 1px solid grey;
+                outline: none;
+                padding: 0 10px;
+            }
+        }
+    }
+}
+  
+  
+  
+  
